@@ -1,0 +1,30 @@
+# Ignore the build directory and its contents
+build/
+
+# Ignore temporary files and editor artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore CMake cache and generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+
+# Ignore test and benchmark artifacts
+tests/*.o
+benchmarks/*.o
