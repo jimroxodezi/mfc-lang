@@ -1,0 +1,4 @@
+return 69;
+
+const jimrox = "Jimrox is a great engineer";
+print(jimrox);
