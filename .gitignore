@@ -1,5 +1,5 @@
 # Ignore the build directory and its contents
-build/
+/build
 
 # Ignore temporary files and editor artifacts
 *.o
@@ -26,5 +26,5 @@ cmake_install.cmake
 install_manifest.txt
 
 # Ignore test and benchmark artifacts
-tests/*.o
-benchmarks/*.o
+/tests/*.o
+/benchmarks/*.o
