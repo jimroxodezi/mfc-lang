@@ -1,3 +1,0 @@
-/home/jimrox/projects/lowlevelprogramming/mfc/build/CMakeFiles/mfc.dir
-/home/jimrox/projects/lowlevelprogramming/mfc/build/CMakeFiles/edit_cache.dir
-/home/jimrox/projects/lowlevelprogramming/mfc/build/CMakeFiles/rebuild_cache.dir

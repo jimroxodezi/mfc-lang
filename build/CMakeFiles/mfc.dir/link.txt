@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/mfc.dir/src/main.cpp.o CMakeFiles/mfc.dir/src/lexer.cpp.o -o mfc 
