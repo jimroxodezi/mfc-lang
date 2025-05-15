@@ -1,4 +1,5 @@
 #include "mfc/lex/tokens.hpp"
+#include "mfc/lex/lexer.hpp"
 
 #include <iostream>
 #include <string>
@@ -11,5 +12,10 @@ namespace mfc {
 //     }
 //     std::cout << std::endl;
 // }
+
+constexpr char Lexer::currentChar() const {
+    
+    return pos < source.length() ? source[pos] : '\0';
+}
 
 }

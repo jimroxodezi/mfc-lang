@@ -3,6 +3,10 @@
 
 namespace mfc {
 
+struct ASTNode{
+        /* data */
+};
+    
 
     
 }

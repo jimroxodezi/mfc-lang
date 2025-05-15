@@ -2,8 +2,9 @@
 #define MFC_LEXER_HPP
 
 #include <string>
+#include <unordered_map>
 
-#include "lex/tokens.hpp"
+#include "mfc/lex/tokens.hpp"
 
 namespace mfc {
 
@@ -11,10 +12,25 @@ namespace mfc {
 
 struct Lexer {
     private:
+    const std::string& source;
+    size_t pos;
+    static const std::unordered_map<std::string, TokenKind> keywords;
+
+    // current chat returns the current character tracker by pos
+    // if we are at the end of source, it returns EOF
     constexpr char currentChar() const;
+
     void advance();
+    
     static constexpr bool isAlpha(char c);
+    
     static constexpr bool isDigit(char c);
+    
+    // helper function to skip whitespaces
+    void skipWhitespace();
+
+    // helper function to skip comments
+    void skipComment();
 
     public:
     explicit Lexer(const std::string& source_code);

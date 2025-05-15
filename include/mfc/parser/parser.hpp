@@ -2,7 +2,7 @@
 #define MFC_PARSER_HPP
 
 #include <vector>
-#include "lex/tokens.hpp"
+#include "mfc/lex/tokens.hpp"
 
 namespace mfc {
 
