@@ -14,8 +14,26 @@ namespace mfc {
 // }
 
 constexpr char Lexer::currentChar() const {
-    
+
     return pos < source.length() ? source[pos] : '\0';
+}
+
+void Lexer::advance() {
+    if (pos < source.length()) {
+        
+    }
+}
+
+constexpr bool Lexer::isAlpha(char c) {
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+}
+
+constexpr bool Lexer::isDigit(char c) {
+    return c >= '0' && c <= '9';
+}
+
+constexpr bool Lexer::isSpace(char c) {
+    return c == ' ';
 }
 
 }

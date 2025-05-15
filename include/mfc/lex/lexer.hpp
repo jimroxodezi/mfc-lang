@@ -22,9 +22,14 @@ struct Lexer {
 
     void advance();
     
+    // helper function to determine if a character is an alphabet
     static constexpr bool isAlpha(char c);
     
+    // helper function to determine if a character is a digit
     static constexpr bool isDigit(char c);
+
+    // helper function to determine if a character is (space)
+    static constexpr bool isSpace(char c);
     
     // helper function to skip whitespaces
     void skipWhitespace();
