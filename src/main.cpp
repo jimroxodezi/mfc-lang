@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
 
     // std::cout << "\n\n\n" << source_code << std::endl;
 
-    mfc::tokenize(source_code);
+    // mfc::tokenize(source_code);
 
     return EXIT_SUCCESS;
 }

@@ -78,6 +78,7 @@ struct Token {
     bool isOneOf(TokenKind K1, TokenKind K2) const {
         return is(K1) || is(K2);
     }
+    //specialization for multiple token kinds
     template <typename... Ts> bool isOneOf(TokenKind K1, Ts... Ks) const {
         return is(K1) || isOneOf(Ks...);
     }
