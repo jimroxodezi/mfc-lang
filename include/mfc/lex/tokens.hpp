@@ -2,6 +2,9 @@
 #define MFC_TOKENS_H
 
 #include <string>
+#include <optional>
+
+// #include "lex/lexer.hpp"
 
 namespace mfc {
 
@@ -55,18 +58,32 @@ namespace mfc {
         MFC_TOKENKIND_STRING_LITERAL
     };
 
+
+struct SourceLocation{
+    u_int16_t row{0};
+    u_int16_t column{0};
+};
+
 struct Token {
+    // actual flavour or type of the token. see TokenKind enum for possible tokens
     TokenKind kind;
-    std::string name;
-    int line;
-    int column;
+    std::optional<std::string> name;
+    SourceLocation loc;
+
+    /// is checks if this token is a specific kind, as in
+    bool is(TokenKind K) const { return kind == K; }
+    // isNot checks if a token is not of a specific kind
+    bool isNot(TokenKind K) const { return kind != K; }
+    // isOneOf checks if a token is 
+    bool isOneOf(TokenKind K1, TokenKind K2) const {
+        return is(K1) || is(K2);
+    }
+    template <typename... Ts> bool isOneOf(TokenKind K1, Ts... Ks) const {
+        return is(K1) || isOneOf(Ks...);
+    }
 };
 
-struct Lexer {
 
-};
-
-void tokenize(std::string& source_file);
 
 }
 
