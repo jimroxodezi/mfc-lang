@@ -1,10 +1,12 @@
 #ifndef MFC_PARSER_HPP
 #define MFC_PARSER_HPP
 
-#include <vector>
 #include "mfc/lex/tokens.hpp"
+#include "mfc/basic/common.hpp"
 
-namespace mfc {
+#include <vector>
+
+MFC_NAMESPACE_BEGIN
 
 class Parser {
 public:
@@ -12,8 +14,7 @@ public:
     void parse();
 };
 
-    
-}
+MFC_NAMESPECE_END
 
 #endif
 

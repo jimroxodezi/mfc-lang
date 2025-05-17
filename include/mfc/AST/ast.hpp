@@ -1,14 +1,15 @@
 #ifndef MFC_AST_H
 #define MFC_AST_H
 
-namespace mfc {
+#include "mfc/basic/common.hpp"
+
+MFC_NAMESPACE_BEGIN
 
 struct ASTNode{
         /* data */
 };
     
 
-    
-}
+MFC_NAMESPECE_END
 
 #endif

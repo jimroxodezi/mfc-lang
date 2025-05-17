@@ -1,10 +1,13 @@
+
+
 #include "mfc/lex/tokens.hpp"
 #include "mfc/lex/lexer.hpp"
+#include "mfc/basic/common.hpp"
 
 #include <iostream>
 #include <string>
 
-namespace mfc {
+MFC_NAMESPACE_BEGIN
 
 // void tokenize(std::string& source_file) {
 //     for (char c : source_file) {
@@ -20,7 +23,7 @@ constexpr char Lexer::currentChar() const {
 
 void Lexer::advance() {
     if (pos < source.length()) {
-        
+
     }
 }
 
@@ -33,7 +36,7 @@ constexpr bool Lexer::isDigit(char c) {
 }
 
 constexpr bool Lexer::isSpace(char c) {
-    return c == ' ';
+    return c == ' ' || c == '\t' /* || '\v' */;
 }
 
-}
+MFC_NAMESPECE_END

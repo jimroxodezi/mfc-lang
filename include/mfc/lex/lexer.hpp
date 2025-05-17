@@ -5,10 +5,9 @@
 #include <unordered_map>
 
 #include "mfc/lex/tokens.hpp"
+#include "mfc/basic/common.hpp"
 
-namespace mfc {
-
-
+MFC_NAMESPACE_BEGIN
 
 struct Lexer {
     private:
@@ -42,11 +41,10 @@ struct Lexer {
     Token nextToken();
 };
     
-void tokenize(std::string& source_file);
+// void tokenize(std::string& source_file);
 
     
-}
-
+MFC_NAMESPECE_END
 
 
 #endif
