@@ -4,8 +4,6 @@
 #include <cstdint>
 
 
-
-
 #define MFC_NOT_COPYABLE(name)                  \
     name(const name&) = delete;                 \
     name& operator=(const name&) = delete;

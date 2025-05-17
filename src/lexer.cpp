@@ -9,12 +9,6 @@
 
 MFC_NAMESPACE_BEGIN
 
-// void tokenize(std::string& source_file) {
-//     for (char c : source_file) {
-//         std::cout << c;
-//     }
-//     std::cout << std::endl;
-// }
 
 constexpr char Lexer::currentChar() const {
 
@@ -37,6 +31,20 @@ constexpr bool Lexer::isDigit(char c) {
 
 constexpr bool Lexer::isSpace(char c) {
     return c == ' ' || c == '\t' /* || '\v' */;
+}
+
+constexpr void Lexer::skipComment() {
+
+}
+
+constexpr void Lexer::skipWhitespace() {
+
+}
+
+constexpr Lexer::Lexer(const std::string& source_code) : source(source_code) {}
+
+constexpr Token Lexer::nextToken() {
+
 }
 
 MFC_NAMESPECE_END

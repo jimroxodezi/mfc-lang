@@ -31,14 +31,14 @@ struct Lexer {
     static constexpr bool isSpace(char c);
     
     // helper function to skip whitespaces
-    void skipWhitespace();
+    constexpr void skipWhitespace();
 
     // helper function to skip comments
-    void skipComment();
+    constexpr void skipComment();
 
     public:
-    explicit Lexer(const std::string& source_code);
-    Token nextToken();
+    explicit constexpr Lexer(const std::string& source_code);
+    constexpr Token nextToken();
 };
     
 // void tokenize(std::string& source_file);
